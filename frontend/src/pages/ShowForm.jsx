@@ -3,6 +3,7 @@ import { useUser, useAuth } from '@clerk/clerk-react';
 import { Link } from 'react-router-dom';
 
 const ShowForm = () => {
+  const url = "https://finance-tracker-with-authentication-2.onrender.com";
   const [transactions, setTransactions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,7 +19,7 @@ const ShowForm = () => {
     const fetchData = async () => {
       try {
         const token = await getToken();
-        const response = await fetch(`http://localhost:3000/api/getAll/${user.id}`, {
+        const response = await fetch(`${url}/api/getAll/${user.id}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -48,7 +49,7 @@ const ShowForm = () => {
     try {
    
       const token = await getToken();
-      const response = await fetch(`http://localhost:3000/api/${_id}`,{
+      const response = await fetch(`${url}/api/${_id}`,{
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -72,7 +73,7 @@ const ShowForm = () => {
   const handleSave = async () => {
     try {
       const token = await getToken();
-      const response = await fetch(`http://localhost:3000/api/${editingTransaction._id}`, {
+      const response = await fetch(`${url}/api/${editingTransaction._id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,

@@ -13,6 +13,8 @@ import {
 import { Link } from 'react-router-dom';
 
 const FillForm = () => {
+
+  const url = "https://finance-tracker-with-authentication-2.onrender.com";
   const { user, isLoaded } = useUser();
   const { isSignedIn, getToken } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -67,7 +69,7 @@ const FillForm = () => {
       const token = await getToken();
       if (!token) throw new Error('Authentication token not available');
 
-      const response = await fetch('http://localhost:3000/api/', {
+      const response = await fetch(`${url}/api/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
