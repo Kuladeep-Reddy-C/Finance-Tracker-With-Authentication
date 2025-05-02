@@ -5,15 +5,6 @@
 ![Clerk Auth](https://img.shields.io/badge/Auth-Clerk-blue)  
 ![TailwindCSS](https://img.shields.io/badge/Styled%20With-TailwindCSS-38B2AC)
 
-**Track your income and expenses with ease!**  
-A full-stack Finance Tracker built using the **MERN stack**, featuring secure authentication powered by **Clerk**.
-
-🔗 **Live Demo:** [Finance Tracker on Render](https://finance-tracker-with-authentication-4.onrender.com)
-
----
-
-markdown
-Copy code
 # 💰 Finance Tracker
 
 **Track your income and expenses with ease!**  
